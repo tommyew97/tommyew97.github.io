@@ -30,6 +30,8 @@ jobs:
           FIRST_NAME: Mona
           MIDDLE_NAME: The
           LAST_NAME: Octocat
+      - name: Secret
+        run: echo ${{secrets.PASSWORD}}
   deploy:
     needs: build
     runs-on: ubuntu-latest
